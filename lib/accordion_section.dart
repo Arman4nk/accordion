@@ -271,9 +271,7 @@ class AccordionSection extends StatelessWidget with CommonParams {
                         child: Container(
                           decoration: BoxDecoration(
                               color: contentBackgroundColor,
-                              borderRadius: BorderRadius.vertical(
-                                  bottom: Radius.circular(
-                                      contentBorderRadius! / 1.02))),
+                            borderRadius: BorderRadius.circular(contentBorderRadius! / 1.02),),
                           child: Padding(
                             padding: EdgeInsets.symmetric(
                               horizontal: contentHorizontalPadding!,
