@@ -251,8 +251,8 @@ class AccordionSection extends StatelessWidget with CommonParams {
                     : const AlwaysStoppedAnimation(1.0),
                 child: Center(
                   child: Container(
-                    margin: const EdgeInsets.symmetric(vertical: 5),
                     clipBehavior: Clip.antiAlias,
+                    margin: const EdgeInsets.symmetric(vertical: 5.0),
                     decoration: BoxDecoration(
                       color: contentBorderColor ?? Theme.of(context).primaryColor,
                       borderRadius: BorderRadius.circular(contentBorderRadius!),
@@ -265,17 +265,24 @@ class AccordionSection extends StatelessWidget with CommonParams {
                         contentBorderWidth ?? 1,
                       ),
                       child: Container(
-                        clipBehavior: Clip.antiAlias,
                         decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(contentBorderRadius! / 1.02)),
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: contentHorizontalPadding!,
-                            vertical: contentVerticalPadding!,
-                          ),
-                          child: Center(
-                            child: content,
+                            borderRadius: BorderRadius.circular(contentBorderRadius! / 1.02),),
+                        child: Container(
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(
+                              color: contentBackgroundColor,
+                              borderRadius: BorderRadius.vertical(
+                                  bottom: Radius.circular(
+                                      contentBorderRadius! / 1.02))),
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: contentHorizontalPadding!,
+                              vertical: contentVerticalPadding!,
+                            ),
+                            child: Center(
+                              child: content,
+                            ),
                           ),
                         ),
                       ),
