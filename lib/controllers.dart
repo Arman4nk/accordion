@@ -12,7 +12,8 @@ enum ScrollIntoViewOfItems { none, slow, fast }
 /// SectionHapticFeedback controls which (if any) haptic feedback
 /// should be played when clicking the header of a section.
 /// Can be applied to both `Accordion` for all sections or
-/// to `AccordionSection` for individula sections.
+/// to `AccordionSection` for individula sections
+/// .test commit
 enum SectionHapticFeedback {
   none,
   light,
